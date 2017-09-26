@@ -23,8 +23,8 @@ export class PharmaHome {
   constructor(public navCtrl: NavController, public authService: AuthService, public loadingCtrl: LoadingController, private toastCtrl: ToastController,public appPrefence: AppPreferences,private sqlite: SQLite, private platform: Platform) {
 
      this.platform.ready().then(() => {
-         //  this.splashdata();
-this.navCtrl.setRoot(PharmaMain);
+           this.splashdata();
+//this.navCtrl.setRoot(PharmaMain);
         });
 
 	  
@@ -36,7 +36,9 @@ this.navCtrl.setRoot(PharmaMain);
       this.loading.dismiss();
       this.data = result;
 	 var my= JSON.stringify(this.data);//this.data[0];//Object.values(this.data)
-			this.creatingDb();
+
+   this.navCtrl.setRoot(PharmaMain);
+			//this.creatingDb();
 	  
 	  //localStorage.setItem('token', this.data.access_token);
       
