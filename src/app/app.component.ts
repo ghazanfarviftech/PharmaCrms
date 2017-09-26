@@ -5,6 +5,10 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { PharmaLogin } from '../pages/pharma-login/pharma-login';
 import { PharmaHome } from '../pages/pharma-home/pharma-home';
+<<<<<<< HEAD
+=======
+import { PharmaMain } from '../pages/pharma-main/pharma-main';
+>>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
 import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';

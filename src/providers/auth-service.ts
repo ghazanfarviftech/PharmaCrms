@@ -7,6 +7,12 @@ import * as xml2js from 'xml2js';
  
  
 let apiUrl = 'http://pharmacrm.com.pk/icianimalhealth/Webservice/app_login.asmx/';
+<<<<<<< HEAD
+=======
+let apiUrl2 = 'http://pharmacrm.com.pk/ICIAHMobileService/SchdulerDayView.asmx/';
+
+
+>>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
 
 export class User {
   userNames: string;
@@ -86,5 +92,25 @@ export class AuthService {
 	
 	
   }
+<<<<<<< HEAD
+=======
+
+
+  public dayView(credentials) {
+    return new Promise((resolve, reject) => {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        this.http.post(apiUrl2+'GetSchedulerDayView',  JSON.stringify({employeeId: '18',dateTime: '09/22/2017'}), {headers: headers})
+          .subscribe(res => {
+            resolve(res.json());
+          }, (err) => {
+            reject(err);
+          });
+    });
+  
+
+  }
+
+>>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
   
 }

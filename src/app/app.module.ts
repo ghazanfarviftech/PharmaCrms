@@ -9,6 +9,10 @@ import { HttpModule } from '@angular/http';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { PharmaLogin } from '../pages/pharma-login/pharma-login';
 import { PharmaHome } from '../pages/pharma-home/pharma-home';
+<<<<<<< HEAD
+=======
+import { PharmaMain } from '../pages/pharma-main/pharma-main';
+>>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 
@@ -27,6 +31,10 @@ import { enableProdMode } from '@angular/core';
     HelloIonicPage,
 	PharmaLogin,
 	PharmaHome,
+<<<<<<< HEAD
+=======
+  PharmaMain,
+>>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
     ItemDetailsPage,
     ListPage
   ],
@@ -40,6 +48,10 @@ import { enableProdMode } from '@angular/core';
     MyApp,
     PharmaLogin,
 	PharmaHome,
+<<<<<<< HEAD
+=======
+  PharmaMain,
+>>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
     ItemDetailsPage,
     ListPage
   ],
