@@ -1,16 +1,9 @@
 import { Component } from '@angular/core';
-<<<<<<< HEAD
-import { NavController, LoadingController, ToastController } from 'ionic-angular';
-import { AppPreferences } from '@ionic-native/app-preferences';
-import { AuthService } from '../../providers/auth-service';
-import { PharmaLogin } from '../pharma-login/pharma-login';
-=======
 import { NavController, Platform, LoadingController, ToastController } from 'ionic-angular';
 import { AppPreferences } from '@ionic-native/app-preferences';
 import { AuthService } from '../../providers/auth-service';
 import { PharmaLogin } from '../pharma-login/pharma-login';
 import { PharmaMain } from '../pharma-main/pharma-main';
->>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 
 
@@ -24,10 +17,6 @@ export class PharmaHome {
   data: any;
   mydata: string[];
 
-<<<<<<< HEAD
-  constructor(public navCtrl: NavController, public authService: AuthService, public loadingCtrl: LoadingController, private toastCtrl: ToastController,public appPrefence: AppPreferences,private sqlite: SQLite) {
-	  this.splashdata();
-=======
   public database: SQLite;
   public sqliteexequery: SQLiteObject;
 
@@ -39,7 +28,6 @@ this.navCtrl.setRoot(PharmaMain);
         });
 
 	  
->>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
   }
 
   splashdata() {
@@ -51,51 +39,13 @@ this.navCtrl.setRoot(PharmaMain);
 			this.creatingDb();
 	  
 	  //localStorage.setItem('token', this.data.access_token);
-<<<<<<< HEAD
-      //this.navCtrl.setRoot(TabsPage);
-=======
       
->>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
     }, (err) => {
       this.loading.dismiss();
       this.presentToast(err);
     });
   }
   
-<<<<<<< HEAD
-  creatingDb()
-  {
-	  this.sqlite.create({
-  name: 'pharmaCrm.db',
-  location: 'default'
-})
-  .then((db: SQLiteObject) => {
-
-	
-	var createTblQuery = "CREATE TABLE DoctorOfEmployee ("
-                + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + "salesstageid TEXT ,"
-                + "salesstagename TEXT ,"
-                + "salesstagedescription TEXT ,"
-                + "isactive TEXT ,"
-                + "createdate TEXT ,"
-                + "updatedate TEXT );";
-				
-				
-    
-				//db.openDBs();
-				//db.open();
-/* 
- db.executeSql(createTblQuery, {})
-      .then(() => console.log('Executed SQL')
-	  
-	  )
-      .catch(e => console.log(e));
-*/
-//db.close();
-  })
-  .catch(e => console.log(e));
-=======
 
   creatingDb()
   {
@@ -130,7 +80,6 @@ this.navCtrl.setRoot(PharmaMain);
 
 
 	
->>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
  }
   
   doLogin() {
@@ -179,8 +128,6 @@ this.navCtrl.setRoot(PharmaMain);
     toast.present();
   }
 
-<<<<<<< HEAD
-=======
    public refresh() {
 
           /* sqliteexequery.executeSql("CREATE TABLE IF NOT EXISTS people (id INTEGER PRIMARY KEY AUTOINCREMENT, firstname TEXT, lastname TEXT)", {}).then((data) => {
@@ -318,5 +265,4 @@ this.sqliteexequery.executeSql("DROP TABLE IF EXISTS SGHistoryInventory",{}).the
 
     }
 
->>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
 }

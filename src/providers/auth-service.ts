@@ -7,12 +7,9 @@ import * as xml2js from 'xml2js';
  
  
 let apiUrl = 'http://pharmacrm.com.pk/icianimalhealth/Webservice/app_login.asmx/';
-<<<<<<< HEAD
-=======
 let apiUrl2 = 'http://pharmacrm.com.pk/ICIAHMobileService/SchdulerDayView.asmx/';
 
 
->>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
 
 export class User {
   userNames: string;
@@ -92,8 +89,6 @@ export class AuthService {
 	
 	
   }
-<<<<<<< HEAD
-=======
 
 
   public dayView(credentials) {
@@ -111,6 +106,5 @@ export class AuthService {
 
   }
 
->>>>>>> 0e4910a9dca6bf28330389e880288446bfcedf42
   
 }
