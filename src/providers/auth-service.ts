@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import { Http, Headers } from '@angular/http';
+import { Http, Headers,RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import * as xml2js from 'xml2js';
  
  
-let apiUrl = 'http://pharmacrm.com.pk/icianimalhealth/Webservice/app_login.asmx/';
-let apiUrl2 = 'http://pharmacrm.com.pk/ICIAHMobileService/SchdulerDayView.asmx/';
+let apiUrl = 'http://203.92.5.36/icianimalhealth/Webservice/app_login.asmx/';
+let apiUrl2 = 'http://203.92.5.36/ICIAHMobileService/SchdulerDayView.asmx/';
 
 
 
@@ -25,7 +25,36 @@ export class User {
 export class AuthService {
   currentUser: User;
  constructor(public http: Http) {}
-  public login(credentials) {
+
+
+/* public login(credentials) {
+    return new Promise((resolve, reject) => {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('token', 'e662c46b5bef24a96c3128e25f43beaa05e3bd13');
+
+        let options = new RequestOptions({ headers: headers });
+
+let postParams = {
+      EmailAddress: 'ryouellc@tuttocitta.it',
+      Password: 'rose123'
+    }
+
+      //923013126028,923046278326
+        this.http.post('https://chainayena.net/revo/api/revo-employee-login',postParams,options)
+          .subscribe(res => {
+          console.log("data agaya hit hogai service "+ res.json());
+            resolve(res.json());
+          }, (err) => {
+          console.log("data ni aya "+ err);
+            reject(err);
+          });
+    });
+  
+
+  } */
+
+ public login(credentials) {
     return new Promise((resolve, reject) => {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
@@ -40,7 +69,7 @@ export class AuthService {
 	
 
   }
- 
+
   public register(credentials) {
     if (credentials.email === null || credentials.password === null) {
       return Observable.throw("Please insert credentials");
@@ -71,7 +100,7 @@ export class AuthService {
         //headers.append('Content-Type', 'application/json');
 		headers.append('Accept', 'application/xml');
 			//923013126028,923046278326
-        this.http.get('http://pharmacrm.com.pk/ICIAHMobileService/FileService.svc/DownloadFile/18/923013126028/08-10-2017', {headers: headers})
+        this.http.get('http://203.92.5.36/ICIAHMobileService/FileService.svc/DownloadFile/18/923013126028/08-10-2017', {headers: headers})
           .subscribe(res => {
 			  let data  = res.text();//.json();
 			  

@@ -6,6 +6,7 @@ import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { PharmaLogin } from '../pages/pharma-login/pharma-login';
 import { PharmaHome } from '../pages/pharma-home/pharma-home';
 import { PharmaMain } from '../pages/pharma-main/pharma-main';
+import { PharmaLogout } from '../pages/pharma-logout/pharma-logout';
 import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -32,9 +33,8 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Login', component: PharmaLogin },
-	  { title: 'Home', component: PharmaHome },
-      { title: 'My First List', component: ListPage }
+      { title: 'DayView', component: PharmaMain },
+	    { title: 'Logout', component: PharmaLogout }
     ];
   }
 

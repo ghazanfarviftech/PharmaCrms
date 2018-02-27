@@ -21,7 +21,14 @@
     </button>
   </form>
 
-  <button ion-button block clear (click)="register()">
+ <button ion-button block clear (click)="testing()">
+    Testing {{vartesting}}
+  </button>
+   <h2>Please, Login</h2>
+  <button ion-button block clear (click)="opencamera()">
     No have an account? Register Now
   </button>
+
+<img [src]="base64Image" *ngIf="base64Image" />
+
 </ion-content>

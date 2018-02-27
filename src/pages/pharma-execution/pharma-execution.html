@@ -1,0 +1,84 @@
+<!--
+  Generated template for the PharmaExecution page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>pharma-execution</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="cards-bg">
+
+<ion-card>
+
+  <ion-card-content>
+  	<ion-item class="align-right">
+  <ion-label>Date Of Visit</ion-label>
+   <ion-datetime displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" [(ngModel)]="myDate"></ion-datetime>
+</ion-item>
+
+
+<div style="padding: inherit;">
+   <ion-label style="display: inline-block;">Meeting Type</ion-label>
+
+<div style="width: 100%; display: flex;" radio-group [(ngModel)]="autoManufacturers">
+<div style="display: flex;">
+<ion-label>Single</ion-label>
+    <ion-radio value="single" style="padding-top:15px;"></ion-radio>
+</div>
+<div style="display: flex; margin-left: 15px;">
+    <ion-label>Group</ion-label>
+    <ion-radio value="group" style="padding-top:15px;"></ion-radio>
+</div>
+</div>
+</div>
+
+
+<ion-item class="align-right">
+      <ion-label>Start Time</ion-label>
+      <ion-select (change)="onChange(mySelect.time)">
+        <ion-option *ngFor="let mySelect of starttime" value="{{mySelect.time}}" checked="true">{{mySelect.time}}</ion-option>
+        
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="align-right">
+      <ion-label>End Time</ion-label>
+      <ion-select ng-change="showSelectValueEndTime(mySelect)">
+        <ion-option *ngFor="let items of endtime" value="{{items.time}}" checked="true">{{items.time}}</ion-option>
+        
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item class="align-right">
+      <ion-label>Customer</ion-label>
+      <ion-select ng-change="showSelectValueCustomer(mySelect)">
+        <ion-option *ngFor="let customername of customer" value="{{customername.custname}}" checked="true">{{customername.custname}}</ion-option>
+        
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="align-right">
+      <ion-label>Purpose Of Meeting</ion-label>
+      <ion-select ng-change="showSelectValuePov(mySelect)">
+        <ion-option *ngFor="let pov of purpose" value="{{pov.purposeofmeeting}}" checked="true">{{pov.purposeofmeeting}}</ion-option>
+        
+      </ion-select>
+    </ion-item>
+
+
+<button style="width: 100%;" ion-button (click)="submit()">Send</button>
+
+    
+  </ion-card-content>
+
+</ion-card>
+
+</ion-content>

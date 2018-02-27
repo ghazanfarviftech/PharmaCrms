@@ -1,12 +1,31 @@
 <ion-header>
   <ion-navbar>
+  	<!--<button ion-button menuToggle icon-only (click)="openMenu()"> -->
+  		<button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
     <ion-title>Day View</ion-title>
   </ion-navbar>
+
 </ion-header>
 
 
-<ion-content padding>
-  <h2>App Pauch gai hai Main Screen mai mubarak hoooo</h2>
+<ion-content padding class="list-avatar-page">
+  
+  <ion-list>
+
+  	<ion-item *ngFor="let item of personList">
+     
+      <h2>{{ item.DoctorName }}</h2>
+      <p>{{ item.startdate }}</p>
+      
+    </ion-item>
+  	<!--
+  <button ion-item *ngFor="let item of personList" (click)="itemSelected(item)">
+    {{ item.DoctorName }}
+  </button>  
+-->
+</ion-list>
  
 
  <button ion-button block (click)="logout()">

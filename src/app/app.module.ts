@@ -10,6 +10,8 @@ import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { PharmaLogin } from '../pages/pharma-login/pharma-login';
 import { PharmaHome } from '../pages/pharma-home/pharma-home';
 import { PharmaMain } from '../pages/pharma-main/pharma-main';
+import { PharmaLogout } from '../pages/pharma-logout/pharma-logout';
+import { PharmaExecution } from '../pages/pharma-execution/pharma-execution';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 
@@ -18,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AuthService } from '../providers/auth-service';
 import { AppPreferences } from '@ionic-native/app-preferences';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 import { SQLite } from '@ionic-native/sqlite';
 
 import { enableProdMode } from '@angular/core';
@@ -30,11 +33,13 @@ import { enableProdMode } from '@angular/core';
 	PharmaHome,
   PharmaMain,
     ItemDetailsPage,
-    ListPage
+    ListPage,
+    PharmaLogout,
+    PharmaExecution
   ],
   imports: [
     BrowserModule,
-	HttpModule,
+	 HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -44,7 +49,9 @@ import { enableProdMode } from '@angular/core';
 	PharmaHome,
   PharmaMain,
     ItemDetailsPage,
-    ListPage
+    ListPage,
+    PharmaLogout,
+    PharmaExecution
   ],
   providers: [
     StatusBar,
@@ -53,7 +60,8 @@ import { enableProdMode } from '@angular/core';
 	AuthService,
 	HttpModule,
 	AppPreferences,
-	SQLite
+	SQLite,
+  Camera
   ]
 })
 export class AppModule {}
