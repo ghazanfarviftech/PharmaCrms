@@ -23,8 +23,13 @@ export class PharmaHome {
   constructor(public navCtrl: NavController, public authService: AuthService, public loadingCtrl: LoadingController, private toastCtrl: ToastController,public appPrefence: AppPreferences,private sqlite: SQLite, private platform: Platform) {
 
      this.platform.ready().then(() => {
+<<<<<<< HEAD
          // this.splashdata();
 this.navCtrl.setRoot(PharmaMain);
+=======
+           this.splashdata();
+//this.navCtrl.setRoot(PharmaMain);
+>>>>>>> 62db9c63d0ae9c6ec000cc4d3e772bfc97b80a4b
         });
 
 	  
@@ -36,6 +41,7 @@ this.navCtrl.setRoot(PharmaMain);
       this.loading.dismiss();
       this.data = result;
 	 var my= JSON.stringify(this.data);//this.data[0];//Object.values(this.data)
+<<<<<<< HEAD
    var newArr = JSON.parse(my); 
    var newArrs = newArr.Data; 
    var oth = JSON.parse(newArrs.GetAllDoctors);
@@ -44,6 +50,11 @@ this.navCtrl.setRoot(PharmaMain);
 			//this.navCtrl.setRoot(PharmaMain);
 
       this.creatingDb();
+=======
+
+   this.navCtrl.setRoot(PharmaMain);
+			//this.creatingDb();
+>>>>>>> 62db9c63d0ae9c6ec000cc4d3e772bfc97b80a4b
 	  
 	  //localStorage.setItem('token', this.data.access_token);
       
